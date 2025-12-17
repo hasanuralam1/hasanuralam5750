@@ -1,0 +1,232 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>My Portfolio</title>
+
+  <!-- Tailwind CSS -->
+  <script src="https://cdn.tailwindcss.com"></script>
+
+  <!-- Tailwind Config -->
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            primary: '#008080',
+            secondary: '#5f9ea0',
+            dark: '#020617'
+          },
+          animation: {
+            fade: 'fadeIn 1.2s ease-out forwards',
+            slide: 'slideUp 1s ease-out forwards',
+            float: 'float 3s ease-in-out infinite'
+          },
+          keyframes: {
+            fadeIn: {
+              '0%': { opacity: '0' },
+              '100%': { opacity: '1' }
+            },
+            slideUp: {
+              '0%': { opacity: '0', transform: 'translateY(40px)' },
+              '100%': { opacity: '1', transform: 'translateY(0)' }
+            },
+            float: {
+              '0%,100%': { transform: 'translateY(0)' },
+              '50%': { transform: 'translateY(-10px)' }
+            }
+          }
+        }
+      }
+    }
+  </script>
+
+  <!-- Icons -->
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" rel="stylesheet">
+</head>
+<body class="bg-black text-gray-200 scroll-smooth">
+
+<!-- Navbar -->
+<nav class="fixed top-0 w-full z-50 bg-black/80 backdrop-blur border-b border-gray-800">
+  <div class="max-w-7xl mx-auto px-6 py-4 flex justify-between items-center">
+    <h1 class="text-xl font-bold text-primary">MyPortfolio</h1>
+
+    <ul class="hidden md:flex gap-6 text-sm">
+      <!-- <li><a href="#about" class="hover:text-primary">About</a></li> -->
+      <li><a href="#skills" class="hover:text-primary">Skills</a></li>
+      <li><a href="#education" class="hover:text-primary">Education</a></li>
+      <li><a href="#experience" class="hover:text-primary">Experience</a></li>
+      <li><a href="#projects" class="hover:text-primary">Projects</a></li>
+    </ul>
+
+    <button id="menuBtn" class="md:hidden text-xl"><i class="fas fa-bars"></i></button>
+  </div>
+
+  <div id="mobileMenu" class="hidden md:hidden bg-black border-t border-gray-800">
+    <ul class="flex flex-col px-6 py-4 gap-4 text-sm">
+      <!-- <li><a href="#about">About</a></li> -->
+      <li><a href="#skills">Skills</a></li>
+      <li><a href="#education">Education</a></li>
+      <li><a href="#experience">Experience</a></li>
+      <li><a href="#projects">Projects</a></li>
+    </ul>
+  </div>
+</nav>
+
+<!-- Hero -->
+<section class="min-h-screen flex items-center pt-24 animate-fade">
+  <div class="max-w-7xl mx-auto px-6 grid md:grid-cols-2 gap-10 items-center">
+    <div class="flex justify-center">
+      <img src="assets/my_image.png" class="w-64 h-64 rounded-full border-4 border-primary animate-float" />
+    </div>
+    <div class="text-center md:text-left animate-slide">
+      <h2 class="text-4xl md:text-5xl font-extrabold mb-4">Hi, I'm <span class="text-primary">Hasanur Alam</span></h2>
+      
+      <p class="text-gray-400 max-w-xl">Strong foundation in webdevelopment, including skills in PHP, JavaScript, jQuery, HTML,CSS, and OOPs concept passionate about building efficient and user- friendly websites. I am eager to apply my skills and grow professionally in adynamic work environment. 
+</p>
+<!-- Social Media Links -->
+<div class="flex justify-center md:justify-start gap-6 mt-6 text-2xl">
+  <a href="https://facebook.com/yourprofile" target="_blank" class="text-primary hover:scale-110 transition">
+    <i class="fab fa-facebook"></i>
+  </a>
+  <a href="https://instagram.com/yourprofile" target="_blank" class="text-primary hover:scale-110 transition">
+    <i class="fab fa-instagram"></i>
+  </a>
+  <a href="https://github.com/yourprofile" target="_blank" class="text-primary hover:scale-110 transition">
+    <i class="fab fa-github"></i>
+  </a>
+  <a href="https://linkedin.com/in/yourprofile" target="_blank" class="text-primary hover:scale-110 transition">
+    <i class="fab fa-linkedin"></i>
+  </a>
+</div>
+<!-- Contact Info -->
+<div class="flex flex-col md:flex-row justify-center md:justify-start gap-4 mt-4 text-sm text-gray-400">
+  <div class="flex items-center gap-2">
+    <i class="fas fa-phone text-primary"></i>
+    <span>+91 89278 30869</span>
+  </div>
+  <div class="flex items-center gap-2">
+    <i class="fas fa-envelope text-primary"></i>
+    <span>hasanuralam5750@email.com</span>
+  </div>
+</div>
+
+      <a href="#projects" class="inline-block mt-8 px-8 py-3 bg-primary text-black rounded-full font-semibold">View My Work</a>
+    </div>
+  </div>
+</section>
+
+<!-- About
+<section id="about" class="py-24 max-w-7xl mx-auto px-6 animate-slide">
+  <h3 class="text-3xl font-bold text-primary mb-6">About Me</h3>
+  <p class="text-gray-400 max-w-3xl">Detail-oriented developer with strong frontend and backend fundamentals.</p>
+</section> -->
+
+<!-- Skills -->
+<section id="skills" class="py-24 bg-gray-950">
+  <div class="max-w-7xl mx-auto px-6">
+    <h3 class="text-3xl font-bold text-primary mb-10">Skills</h3>
+    <div class="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-6">
+      
+      <div class="skill animate-slide"><i class="fab fa-php"></i>PHP</div>
+       <div class="skill animate-slide"><i class="fab fa-java"></i>JAVA</div>
+      <div class="skill animate-slide"><i class="fab fa-html5"></i>HTML5</div>
+      <div class="skill animate-slide"><i class="fab fa-css3-alt"></i>CSS / Tailwind</div>
+      <div class="skill animate-slide"><i class="fab fa-js"></i>JavaScript</div>
+      <!-- <div class="skill animate-slide"><i class="fab fa-react"></i>React</div> -->
+      <!-- <div class="skill animate-slide"><i class="fab fa-node-js"></i>Node.js</div> -->
+      <!-- <div class="skill animate-slide"><i class="fab fa-python"></i>Python</div> -->
+      <div class="skill animate-slide"><i class="fas fa-database"></i>SQL</div>
+      <div class="skill animate-slide"><i class="fas fa-cubes"></i>Laravel</div>
+      <div class="skill animate-slide"><i class="fab fa-github"></i>GitHub</div>
+
+    </div>
+  </div>
+</section>
+
+<!-- Education -->
+<section id="education" class="py-24 max-w-7xl mx-auto px-6 animate-slide">
+  <h3 class="text-3xl font-bold text-primary mb-6">Education</h3>
+  <div class="card">
+    <h4 class="text-xl font-semibold">B. tech in Electronics and Communication Engineering</h4>
+    <p class="text-gray-400">Gargi Memorial Institute of Technology | 2019 – 2023</p>
+  </div>
+ <br>
+  <div class="card">
+    <h4 class="text-xl font-semibold">Higher Secondary Education</h4>
+    <p class="text-gray-400">Belpukur High Madrasah | 2017 – 2019</p>
+  </div>
+   <br>
+  <div class="card">
+    <h4 class="text-xl font-semibold">Secondary Education 
+</h4>
+    <p class="text-gray-400">Nakkati Pushna Danga High School | 2016 – 2017</p>
+  </div>
+</section>
+
+
+<!-- Experience -->
+<section id="experience" class="py-24 bg-gray-950">
+  <div class="max-w-7xl mx-auto px-6">
+    <h3 class="text-3xl font-bold text-primary mb-10">Work Experience</h3>
+    <div class="space-y-6">
+      <div class="card animate-slide">
+        <h4 class="text-xl font-semibold">PHP Developer Intern </h4>
+        <p class="text-gray-400">Ejob India | 15th July 2024 – 27th March 2025</p>
+        <p class="text-gray-500 mt-2">Industrial treaning | Intern as PHP Developer.</p>
+      </div>
+      <!-- <div class="card animate-slide">
+        <h4 class="text-xl font-semibold">Web Developer</h4>
+        <p class="text-gray-400">Freelance | 2022 – Present</p>
+        <p class="text-gray-500 mt-2">Delivered modern websites using React and Tailwind CSS.</p>
+      </div> -->
+    </div>
+  </div>
+</section>
+
+<!-- Projects -->
+<section id="projects" class="py-24">
+  <div class="max-w-7xl mx-auto px-6">
+    <h3 class="text-3xl font-bold text-primary mb-10">Projects</h3>
+    <div class="grid md:grid-cols-3 gap-8">
+      <div class="project animate-slide">Alfa Health Solution</div>
+      <!-- <div class="project animate-slide">Task Manager App</div>
+      <div class="project animate-slide">E-commerce Platform</div> -->
+    </div>
+  </div>
+</section>
+
+<footer class="py-6 text-center text-gray-500 border-t border-gray-800">
+  © 2025 Hasanur Alam. All rights reserved.
+</footer>
+
+<style>
+.skill, .project, .card {
+  padding: 1.5rem;
+  background: black;
+  border: 1px solid #5f9ea0;
+  border-radius: 1rem;
+  text-align: center;
+  transition: transform .3s, box-shadow .3s;
+}
+.skill i {
+  display: block;
+  font-size: 2rem;
+  margin-bottom: .5rem;
+  color: #008080;
+}
+.skill:hover, .project:hover, .card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 0 20px rgba(0,128,128,.3);
+}
+</style>
+
+<script>
+  const btn = document.getElementById('menuBtn');
+  const menu = document.getElementById('mobileMenu');
+  btn.addEventListener('click', () => menu.classList.toggle('hidden'));
+</script>
+
+</body>
+</html>
