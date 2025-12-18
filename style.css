@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 body {
     background-color: #0d0d0d;
     font-family: "Courier New", monospace;
@@ -61,3 +62,68 @@ body {
     0%, 50% { opacity: 1; }
     51%, 100% { opacity: 0; }
 }
+=======
+body {
+    background-color: #0d0d0d;
+    font-family: "Courier New", monospace;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    color: #00ff9c;
+}
+
+.terminal {
+    width: 700px;
+    background-color: #111;
+    border-radius: 8px;
+    box-shadow: 0 0 20px rgba(0,255,156,0.3);
+}
+
+.header {
+    background-color: #1a1a1a;
+    padding: 8px;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    border-radius: 8px 8px 0 0;
+}
+
+.header span {
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+}
+
+.red { background: #ff5f56; }
+.yellow { background: #ffbd2e; }
+.green { background: #27c93f; }
+
+.header p {
+    margin-left: auto;
+    color: #ccc;
+    font-size: 14px;
+}
+
+.content {
+    padding: 20px;
+}
+
+.prompt {
+    color: #00ff9c;
+}
+
+.output {
+    color: #e6e6e6;
+    margin-bottom: 12px;
+}
+
+.cursor {
+    animation: blink 1s infinite;
+}
+
+@keyframes blink {
+    0%, 50% { opacity: 1; }
+    51%, 100% { opacity: 0; }
+}
+>>>>>>> 7beac5b (Initial portfolio website)
